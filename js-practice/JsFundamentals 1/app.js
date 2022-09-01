@@ -1,23 +1,18 @@
-import { calculateBMI } from "./functions.js";
+// prettier-ignore
+import { calculateBMI, displayBMIComparation } from "./functions.js";
+// prettier-ignore
+import {markMass, markHeight, jhonMass, jhonHeight, massMark, heightMark, massJhon, heightJhon, names} from "./constants.js";
 
-const markMass = 78;
-const markHeight = 1.69;
-const jhonMass = 92;
-const jhonHeight = 1.95;
-
-const massMark = 95;
-const heightMark = 1.88;
-const massJhon = 85;
-const heightJhon = 1.76;
-
+// Operations
+// Calculate BMI first course challenge
+// Case 1
 const markBMI = calculateBMI(markMass, markHeight);
 const jhonBMI = calculateBMI(jhonMass, jhonHeight);
-const markHeightBMI = markBMI > jhonBMI;
-
-console.log(markBMI, jhonBMI, markHeightBMI);
-
+// Case 2
 const bmiMark = calculateBMI(massMark, heightMark);
 const bmiJhon = calculateBMI(massJhon, heightJhon);
-const markHeightBMI2 = bmiMark > bmiJhon;
+// Second chanllenge
+const result = displayBMIComparation(markBMI, jhonBMI, names);
+const secondResult = displayBMIComparation(bmiMark, bmiJhon, names);
 
-console.log(bmiMark, bmiJhon, markHeightBMI2);
+// Type Conversion and Coercion
