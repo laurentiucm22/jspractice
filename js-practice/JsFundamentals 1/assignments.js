@@ -1,3 +1,4 @@
+import { takeDecisions, perfectCountry } from "./functions.js";
 // ==============================================
 // Variables and Values
 const country = "England";
@@ -10,7 +11,7 @@ let populationInFinland = 6;
 
 // ==============================================
 // Data Types
-const isIsland = false;
+const isIsland = true;
 let language = "english";
 let secondLanguage = "portuguese";
 
@@ -31,15 +32,36 @@ description = `${secondCountry} is in ${continent}, and it's ${secondPopulation}
 
 // ==============================================
 // if / else Statements
-const takeDecisions = (population, avaragePopulation) => {
-  let belowAvarage = population - avaragePopulation;
-  console.log(belowAvarage);
-  if (population > avaragePopulation) {
-    console.log(`${country} is above average`);
-  } else {
-    console.log(
-      `${country} population is ${belowAvarage} million below average`
-    );
-  }
-};
-takeDecisions(population, avaragePopulation);
+// takeDecisions(population, avaragePopulation, country);
+
+// ==============================================
+// Type Conversion and Coercion
+// Predict Results
+let a = "9" - "5"; // 4 - number
+let b = "19" - "13" + "17"; // 6 + "17" = "617"; - string
+let c = "19" - "13" + 17; // 6 + 17 = 23; - number
+let d = "123" < 57; // false - boolen
+let e = 5 + 6 + "4" + 9 - 4 - 2; // 1143 - number
+// let's see if I am right
+// console.log(a, b, c, d, e);
+
+let inputNumber = "1991";
+// console.log(inputNumber, Number(inputNumber), +inputNumber);
+
+// ==============================================
+// Equality Operators: == vs. ===
+// let numNeighbors = prompt(
+//   "How many neighbors countries does your country have?"
+// );
+// if (+numNeighbors === 1) {
+//   console.log("Only 1 border!");
+// } else if (numNeighbors > 1) {
+//   console.log("More then 1 border");
+// } else {
+//   console.log("No borders");
+// }
+
+// ==============================================
+// Logical Operations
+// prettier-ignore
+// perfectCountry(country, language, population, isIsland);
