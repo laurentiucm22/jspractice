@@ -1,5 +1,5 @@
 // prettier-ignore
-import {DOLPHIN_SCORE1, DOLPHIN_SCORE2, KOALAS_SCORE1, KOALAS_SCORE2} from "./constants.js";
+import {DOLPHIN_SCORE1, DOLPHIN_SCORE2, KOALAS_SCORE1, KOALAS_SCORE2, dolphins, koalas} from "./constants.js";
 import { calcAvarage } from "./functions.js";
 // ===========================
 // Function
@@ -94,5 +94,32 @@ import { calcAvarage } from "./functions.js";
 // ===============================
 // Coding challenge #1 - Fundamentals part 2
 
-const dolphinsAvarageScore = calcAvarage(DOLPHIN_SCORE1);
-console.log(dolphinsAvarageScore);
+// First case data
+const dolphinsAvarageScore1 = calcAvarage(DOLPHIN_SCORE1).toFixed(1);
+const koalasAvarageScore1 = calcAvarage(KOALAS_SCORE1).toFixed(1);
+
+const checkWinner = (avgDolphin, avgKoalas) => {
+  // prettier-ignore
+  const result = avgDolphin > avgKoalas
+      ? `${dolphins} win (${avgDolphin} vs ${avgKoalas})`
+      : `${koalas} win (${avgKoalas} vs ${avgDolphin})`;
+
+  return result;
+};
+
+console.log(checkWinner(dolphinsAvarageScore1, koalasAvarageScore1));
+
+// Second case data
+const dolphinsAvarageScore2 = calcAvarage(DOLPHIN_SCORE2);
+const koalasAvarageScore2 = calcAvarage(KOALAS_SCORE2);
+
+const checkWinner2 = (avgDolphin2, avgKoalas2) => {
+  // prettier-ignore
+  const result = avgDolphin2 > avgKoalas2
+    ? `${dolphins} win (${avgDolphin2} vs ${avgKoalas2})`
+    : `${koalas} win (${avgKoalas2} vs ${avgDolphin2})`;
+
+  return result;
+};
+
+console.log(checkWinner2(dolphinsAvarageScore2, koalasAvarageScore2));
