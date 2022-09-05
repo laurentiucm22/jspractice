@@ -147,11 +147,17 @@
 // ==============================================
 // The Conditional (Ternary) Operator
 
-// let myCountryPopulation = 20;
+// let myCountryPopulation = 35;
 // let countryName = "Romania";
 
 // console.log(
 //   myCountryPopulation >= 33
 //     ? `${countryName}'s population is above avarage!🚩`
 //     : `${countryName}'s population is below avarage 🏴‍☠️`
+// );
+
+// console.log(
+//   `${countryName}'s population is ${
+//     myCountryPopulation >= 33 ? "above" : "below"
+//   } avarage!`
 // );
