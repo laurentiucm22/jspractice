@@ -95,31 +95,58 @@ import { calcAvarage } from "./functions.js";
 // Coding challenge #1 - Fundamentals part 2
 
 // First case data
-const dolphinsAvarageScore1 = calcAvarage(DOLPHIN_SCORE1).toFixed(1);
-const koalasAvarageScore1 = calcAvarage(KOALAS_SCORE1).toFixed(1);
+const dolphinsAvarageScore1 = calcAvarage(DOLPHIN_SCORE1).toFixed(0);
+const koalasAvarageScore1 = calcAvarage(KOALAS_SCORE1).toFixed(0);
 
 const checkWinner = (avgDolphin, avgKoalas) => {
-  // prettier-ignore
-  const result = avgDolphin > avgKoalas
-      ? `${dolphins} win (${avgDolphin} vs ${avgKoalas})`
-      : `${koalas} win (${avgKoalas} vs ${avgDolphin})`;
-
-  return result;
+  if (avgDolphin >= 2 * avgKoalas) {
+    console.log(`${dolphins} win (${avgDolphin} vs ${avgKoalas})`);
+  } else if (avgKoalas >= 2 * avgDolphin) {
+    console.log(`${koalas} win (${avgKoalas} vs ${avgDolphin})`);
+  } else {
+    console.log("No team wins...");
+  }
 };
 
-console.log(checkWinner(dolphinsAvarageScore1, koalasAvarageScore1));
+checkWinner(dolphinsAvarageScore1, koalasAvarageScore1);
 
 // Second case data
-const dolphinsAvarageScore2 = calcAvarage(DOLPHIN_SCORE2);
-const koalasAvarageScore2 = calcAvarage(KOALAS_SCORE2);
+const dolphinsAvarageScore2 = calcAvarage(DOLPHIN_SCORE2).toFixed(0);
+const koalasAvarageScore2 = calcAvarage(KOALAS_SCORE2).toFixed(0);
 
-const checkWinner2 = (avgDolphin2, avgKoalas2) => {
-  // prettier-ignore
-  const result = avgDolphin2 > avgKoalas2
-    ? `${dolphins} win (${avgDolphin2} vs ${avgKoalas2})`
-    : `${koalas} win (${avgKoalas2} vs ${avgDolphin2})`;
-
-  return result;
+const checkWinner2 = (avgDolphin, avgKoalas) => {
+  if (avgDolphin >= 2 * avgKoalas) {
+    console.log(`${dolphins} win (${avgDolphin} vs ${avgKoalas})`);
+  } else if (avgKoalas >= 2 * avgDolphin) {
+    console.log(`${koalas} win (${avgKoalas} vs ${avgDolphin})`);
+  } else {
+    console.log("No team wins...");
+  }
 };
 
-console.log(checkWinner2(dolphinsAvarageScore2, koalasAvarageScore2));
+checkWinner2(dolphinsAvarageScore2, koalasAvarageScore2);
+
+// // Practice some OOP
+// function Circle(radius) {
+//   this.radius = radius;
+//   this.defaultLocation = { x: 0, y: 0 };
+//   this.computeOptimumLocation = function (factor) {
+//     console.log("Magic Here");
+//   };
+//   this.draw = function () {
+//     this.computeOptimumLocation();
+//     console.log("draw");
+//   };
+// }
+// const circle = new Circle(10);
+// console.log(circle);
+
+// const Stopwatch() {
+//   // duration prop
+//   // start prop
+//   // error is
+//   // stop prop
+//   // reset prop
+// }
+
+// const sw = new Stopwatch();
