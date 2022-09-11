@@ -1,130 +1,133 @@
+import { calculateTip } from "./functions.js";
+import { bills } from "./constants.js";
+
 // prettier-ignore
-import {DOLPHIN_SCORE1, DOLPHIN_SCORE2, KOALAS_SCORE1, KOALAS_SCORE2, dolphins, koalas} from "./constants.js";
-import { calcAvarage } from "./functions.js";
-// ===========================
-// Function
-// function logger() {
-//   console.log("My name is Laurentiu!");
-// }
+// import {DOLPHIN_SCORE1, DOLPHIN_SCORE2, KOALAS_SCORE1, KOALAS_SCORE2, dolphins, koalas} from "./constants.js";
+// import { calcAvarage } from "./functions.js";
+// // ===========================
+// // Function
+// // function logger() {
+// //   console.log("My name is Laurentiu!");
+// // }
 
-// logger();
+// // logger();
 
-// function fruitProcessor(apples, oranges) {
-//   const juice = `Juice with ${apples} apples and ${oranges} oranges`;
-//   return juice;
-// }
-// const appleJuice = fruitProcessor(5, 0);
+// // function fruitProcessor(apples, oranges) {
+// //   const juice = `Juice with ${apples} apples and ${oranges} oranges`;
+// //   return juice;
+// // }
+// // const appleJuice = fruitProcessor(5, 0);
 
-// const appleOrangeJuice = fruitProcessor(2, 4);
+// // const appleOrangeJuice = fruitProcessor(2, 4);
 
-// const date = new Date();
-// const currentYear = date.getFullYear();
+// // const date = new Date();
+// // const currentYear = date.getFullYear();
 
-// ======================================
-// Function declaration
-// function calcAge1(birthYear) {
-//   return currentYear - birthYear;
-// }
-// const age1 = calcAge1(1992);
+// // ======================================
+// // Function declaration
+// // function calcAge1(birthYear) {
+// //   return currentYear - birthYear;
+// // }
+// // const age1 = calcAge1(1992);
 
-// // Function expresion
-// const calcAge2 = function (birthYear) {
-//   return currentYear - birthYear;
-// };
-// const age2 = calcAge2(1992);
+// // // Function expresion
+// // const calcAge2 = function (birthYear) {
+// //   return currentYear - birthYear;
+// // };
+// // const age2 = calcAge2(1992);
 
-// ===============================
-// // Arrow function
+// // ===============================
+// // // Arrow function
 
-// const calcAge3 = (birthYear) => currentYear - birthYear;
-// const age3 = calcAge3(1992);
+// // const calcAge3 = (birthYear) => currentYear - birthYear;
+// // const age3 = calcAge3(1992);
 
-// console.log(age3);
+// // console.log(age3);
 
-// const yearsUntilRetirement = (birthYear, firstName) => {
-//   const age = currentYear - birthYear;
-//   const retierement = 65 - age;
-//   return `${firstName} retires in ${retierement} years`;
-// };
-// console.log(yearsUntilRetirement(1992, "Laurentiu"));
-// console.log(yearsUntilRetirement(1965, "Daniel"));
+// // const yearsUntilRetirement = (birthYear, firstName) => {
+// //   const age = currentYear - birthYear;
+// //   const retierement = 65 - age;
+// //   return `${firstName} retires in ${retierement} years`;
+// // };
+// // console.log(yearsUntilRetirement(1992, "Laurentiu"));
+// // console.log(yearsUntilRetirement(1965, "Daniel"));
 
-// ===============================
-// Functions calling other functions
-// function cutFruitPieces(fruit) {
-//   return fruit * 4;
-// }
+// // ===============================
+// // Functions calling other functions
+// // function cutFruitPieces(fruit) {
+// //   return fruit * 4;
+// // }
 
-// function fruitProcessor(apples, oranges) {
-//   const applePieces = cutFruitPieces(apples);
-//   const orangesPieces = cutFruitPieces(oranges);
-//   const juice = `Juice with ${applePieces} pieces of apple and ${orangesPieces} pieces of orange`;
-//   return juice;
-// }
+// // function fruitProcessor(apples, oranges) {
+// //   const applePieces = cutFruitPieces(apples);
+// //   const orangesPieces = cutFruitPieces(oranges);
+// //   const juice = `Juice with ${applePieces} pieces of apple and ${orangesPieces} pieces of orange`;
+// //   return juice;
+// // }
 
-// const appleJuice = fruitProcessor(3, 0);
-// console.log("Apple juice -", appleJuice);
+// // const appleJuice = fruitProcessor(3, 0);
+// // console.log("Apple juice -", appleJuice);
 
-// const orangeJuice = fruitProcessor(0, 5);
-// console.log("Orange juice -", orangeJuice);
+// // const orangeJuice = fruitProcessor(0, 5);
+// // console.log("Orange juice -", orangeJuice);
 
-// const appleOrangeJuice = fruitProcessor(2, 4);
-// console.log("Multy fruct juice -", appleOrangeJuice);
+// // const appleOrangeJuice = fruitProcessor(2, 4);
+// // console.log("Multy fruct juice -", appleOrangeJuice);
 
-// ===============================
-// Function sumarry
+// // ===============================
+// // Function sumarry
 
-// const calcAge = function (birthYear) {
-//   return currentYear - birthYear;
-// };
+// // const calcAge = function (birthYear) {
+// //   return currentYear - birthYear;
+// // };
 
-// const yearsUntilRetirement = function (birthYear, firstName) {
-//   const age = calcAge(birthYear);
-//   const retierement = 65 - age;
+// // const yearsUntilRetirement = function (birthYear, firstName) {
+// //   const age = calcAge(birthYear);
+// //   const retierement = 65 - age;
 
-//   if (retierement > 0) {
-//     return retierement;
+// //   if (retierement > 0) {
+// //     return retierement;
+// //   }
+// //   return -1;
+// // };
+
+// // console.log(yearsUntilRetirement(1992, "Laurentiu"));
+// // console.log(yearsUntilRetirement(1955, "Mick"));
+
+// // ===============================
+// // Coding challenge #1 - Fundamentals part 2
+
+// // First case data
+// const dolphinsAvarageScore1 = calcAvarage(DOLPHIN_SCORE1).toFixed(0);
+// const koalasAvarageScore1 = calcAvarage(KOALAS_SCORE1).toFixed(0);
+
+// const checkWinner = (avgDolphin, avgKoalas) => {
+//   if (avgDolphin >= 2 * avgKoalas) {
+//     console.log(`${dolphins} win (${avgDolphin} vs ${avgKoalas})`);
+//   } else if (avgKoalas >= 2 * avgDolphin) {
+//     console.log(`${koalas} win (${avgKoalas} vs ${avgDolphin})`);
+//   } else {
+//     console.log("No team wins...");
 //   }
-//   return -1;
 // };
 
-// console.log(yearsUntilRetirement(1992, "Laurentiu"));
-// console.log(yearsUntilRetirement(1955, "Mick"));
+// checkWinner(dolphinsAvarageScore1, koalasAvarageScore1);
 
-// ===============================
-// Coding challenge #1 - Fundamentals part 2
+// // Second case data
+// const dolphinsAvarageScore2 = calcAvarage(DOLPHIN_SCORE2).toFixed(0);
+// const koalasAvarageScore2 = calcAvarage(KOALAS_SCORE2).toFixed(0);
 
-// First case data
-const dolphinsAvarageScore1 = calcAvarage(DOLPHIN_SCORE1).toFixed(0);
-const koalasAvarageScore1 = calcAvarage(KOALAS_SCORE1).toFixed(0);
+// const checkWinner2 = (avgDolphin, avgKoalas) => {
+//   if (avgDolphin >= 2 * avgKoalas) {
+//     console.log(`${dolphins} win (${avgDolphin} vs ${avgKoalas})`);
+//   } else if (avgKoalas >= 2 * avgDolphin) {
+//     console.log(`${koalas} win (${avgKoalas} vs ${avgDolphin})`);
+//   } else {
+//     console.log("No team wins...");
+//   }
+// };
 
-const checkWinner = (avgDolphin, avgKoalas) => {
-  if (avgDolphin >= 2 * avgKoalas) {
-    console.log(`${dolphins} win (${avgDolphin} vs ${avgKoalas})`);
-  } else if (avgKoalas >= 2 * avgDolphin) {
-    console.log(`${koalas} win (${avgKoalas} vs ${avgDolphin})`);
-  } else {
-    console.log("No team wins...");
-  }
-};
-
-checkWinner(dolphinsAvarageScore1, koalasAvarageScore1);
-
-// Second case data
-const dolphinsAvarageScore2 = calcAvarage(DOLPHIN_SCORE2).toFixed(0);
-const koalasAvarageScore2 = calcAvarage(KOALAS_SCORE2).toFixed(0);
-
-const checkWinner2 = (avgDolphin, avgKoalas) => {
-  if (avgDolphin >= 2 * avgKoalas) {
-    console.log(`${dolphins} win (${avgDolphin} vs ${avgKoalas})`);
-  } else if (avgKoalas >= 2 * avgDolphin) {
-    console.log(`${koalas} win (${avgKoalas} vs ${avgDolphin})`);
-  } else {
-    console.log("No team wins...");
-  }
-};
-
-checkWinner2(dolphinsAvarageScore2, koalasAvarageScore2);
+// checkWinner2(dolphinsAvarageScore2, koalasAvarageScore2);
 
 // // Practice some OOP
 // function Circle(radius) {
@@ -141,12 +144,58 @@ checkWinner2(dolphinsAvarageScore2, koalasAvarageScore2);
 // const circle = new Circle(10);
 // console.log(circle);
 
-// const Stopwatch() {
-//   // duration prop
-//   // start prop
-//   // error is
-//   // stop prop
-//   // reset prop
-// }
+// ==============================================
+// Coding challenge #2 - Arrays - Fundamentals part 2
+// My take
 
-// const sw = new Stopwatch();
+// console.log(calculateTip(100));
+// let tips = [];
+
+// for (let i = 0; i < bills.length; i++) {
+//   tips.push(calculateTip(bills[i]));
+// }
+// console.log("Bills", bills);
+// console.log("Tips", tips);
+
+// // New total arr = bills + tips;
+// const total = bills.map((bill, index) => {
+//   return bill + tips[index];
+// });
+
+// console.log("Total", total);
+
+// ===============================================
+// Coding Challenge #3 - Object - Arrays - Fundamentals part 2
+const mark = {
+  firstName: "Mark",
+  lastName: "Miller",
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  }
+}
+
+// console.log(marksBMI);
+
+const john = {
+  firstName: "John",
+  lastName: "Smith",
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+mark.calcBMI();
+john.calcBMI();
+// console.log(jhonsBMI);
+
+if (mark.bmi > john.bmi) {
+  // prettier-ignore
+  console.log(
+    `${mark.firstName}'s BMI (${mark.bmi.toFixed(1)}) is bigger than ${john.firstName}'s BMI (${john.bmi.toFixed(1)})`
+  );
+}

@@ -1,6 +1,7 @@
+import { worldPopulation } from "./constants.js";
 // ===========================
 // Functions
-// Function declaration and function expresion
+// Function dec(laration and function expresion
 // Arrow functions
 // Function calling other functions
 
@@ -16,9 +17,31 @@
 // console.log(italyCountry);
 // console.log(netherlandsCountry);
 
+// Practice functions
+// Your company assigns each customer a membership ID, and you are implementing a check digit for those IDs.
+// The check digit should be calculated by adding up all digits in each membership ID. If the result of the sum is a number with more than a single digit, another iteration is required, and the digits of the result also should be added together. This process should repeat until a single-digit number is calculated.
+// For example, for the membership ID "55555" the sum of all digits is 25. Because this is not a single-digit number, 2 and 5 would be added, and the result, 7, would be the check digit.
+
+// function createCheckDigit(membershipId) {
+//   // Write the code that goes here.
+//   let sum = 0;
+
+//   for (let i = 0; i < membershipId.length; i++) {
+//     sum += +membershipId[i];
+//     console.log(sum);
+//   } // sum = 25
+
+//   if (sum <= 9) {
+//     return sum;
+//   }
+//   //Recursiviate
+//   return createCheckDigit(`${sum}`); // sum = 7
+// }
+
+// console.log(createCheckDigit("55555")); // 7
+
 // ===============================
 // Function declaration and function expresion
-// const worldPopulation = 7900;
 
 // Function declaration
 // function percentageOfWorld1(population) {
@@ -61,6 +84,7 @@
 
 // ===============================
 // Function calling other functions
+
 // const describePopulation = (country, population) => {
 //   // prettier-ignore
 //   return `${country} has ${population} million people, which is about ${percentageOfWorld3(population).toFixed(1)}% of the world.`;
@@ -73,3 +97,61 @@
 // console.log(romania);
 // console.log(china);
 // console.log(italy);
+
+// ===============================
+// Introduction to Arrays;
+// const population = [20, 60, 300, 70];
+// const verifyArrLeng = population.length >= 4;
+// console.log(verifyArrLeng);
+
+// function percentageOfWorld1(population) {
+//   return (population / worldPopulation) * 100;
+// }
+// const percentages = population.map((el) => {
+//   return percentageOfWorld1(el);
+// });
+// console.log(percentages);
+
+// ===============================
+// Array Operations (Methods)
+
+// const neighbours = ["Bulgaria", "Ungaria", "Ucraina", "Moldova"];
+// console.log(neighbours);
+
+// neighbours.push("Utopia");
+// console.log(neighbours);
+
+// neighbours.pop();
+// console.log(neighbours);
+
+// if (!neighbours.includes("Germany")) {
+//   console.log(`Not a country in the center of Europe`);
+// }
+
+// neighbours[neighbours.indexOf("Moldova")] = "Republic of Moldova";
+// console.log(neighbours);
+
+// ==================================
+// Introduction to Objects
+// const myCountry = {
+//   country: "Romania",
+//   capital: "Bucarest",
+//   language: "romanian",
+//   population: 20,
+//   neighbours: ["Ukrain", "Hungary", "Moldova", "Bulgaria"],
+// };
+// myCountry.continent = "Europe";
+// myCountry["my-state"] = "Cluj";
+// myCountry.city = "Cluj-Napoca";
+
+// console.log(myCountry);
+
+// console.log(
+//   `${myCountry.country} has ${myCountry.population} million people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}. I am from ${myCountry["city"]} in judetul ${myCountry["my-state"]}.`
+// );
+
+// myCountry.population += 2;
+// console.log(myCountry.population);
+
+// myCountry["population"] -= 2;
+// console.log(myCountry["population"]);

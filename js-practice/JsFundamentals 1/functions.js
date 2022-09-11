@@ -4,6 +4,7 @@ export const calculateBMI = (mass, height) => {
   const BMI = mass / height ** 2 || mass / (height * height);
   return BMI;
 };
+
 // prettier-ignore
 export const displayBMIComparation = (firstBMI, secondBMI, { firstName, secondName }) => {
   if (firstBMI > secondBMI) {
@@ -44,6 +45,5 @@ export const calculateAvarageScore = (arr) => {
   let calculateScore = arr.reduce((prevVal, currentVal) => {
     return prevVal + currentVal;
   });
-  let calculateAvarage = calculateScore / arr.length;
-  return calculateAvarage;
+  return calculateScore / arr.length;
 };
