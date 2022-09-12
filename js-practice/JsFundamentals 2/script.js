@@ -1,5 +1,5 @@
 import { calculateTip } from "./functions.js";
-import { bills } from "./constants.js";
+import { bills, BILLS } from "./constants.js";
 
 // prettier-ignore
 // import {DOLPHIN_SCORE1, DOLPHIN_SCORE2, KOALAS_SCORE1, KOALAS_SCORE2, dolphins, koalas} from "./constants.js";
@@ -166,36 +166,74 @@ import { bills } from "./constants.js";
 
 // ===============================================
 // Coding Challenge #3 - Object - Arrays - Fundamentals part 2
-const mark = {
-  firstName: "Mark",
-  lastName: "Miller",
-  mass: 78,
-  height: 1.69,
-  calcBMI: function () {
-    this.bmi = this.mass / this.height ** 2;
-    return this.bmi;
-  }
-}
+// const mark = {
+//   firstName: "Mark",
+//   lastName: "Miller",
+//   mass: 78,
+//   height: 1.69,
+//   calcBMI: function () {
+//     this.bmi = this.mass / this.height ** 2;
+//     return this.bmi;
+//   }
+// }
 
-// console.log(marksBMI);
+// // console.log(marksBMI);
 
-const john = {
-  firstName: "John",
-  lastName: "Smith",
-  mass: 92,
-  height: 1.95,
-  calcBMI: function () {
-    this.bmi = this.mass / this.height ** 2;
-    return this.bmi;
-  },
-};
-mark.calcBMI();
-john.calcBMI();
-// console.log(jhonsBMI);
+// const john = {
+//   firstName: "John",
+//   lastName: "Smith",
+//   mass: 92,
+//   height: 1.95,
+//   calcBMI: function () {
+//     this.bmi = this.mass / this.height ** 2;
+//     return this.bmi;
+//   },
+// };
+// mark.calcBMI();
+// john.calcBMI();
+// // console.log(jhonsBMI);
 
-if (mark.bmi > john.bmi) {
-  // prettier-ignore
-  console.log(
-    `${mark.firstName}'s BMI (${mark.bmi.toFixed(1)}) is bigger than ${john.firstName}'s BMI (${john.bmi.toFixed(1)})`
-  );
-}
+// if (mark.bmi > john.bmi) {
+//   // prettier-ignore
+//   console.log(
+//     `${mark.firstName}'s BMI (${mark.bmi.toFixed(1)}) is bigger than ${john.firstName}'s BMI (${john.bmi.toFixed(1)})`
+//   );
+// } else {
+//   console.log(
+//     `${john.firstName}'s BMI (${john.bmi.toFixed(1)}) is bigger than ${
+//       mark.firstName
+//     }'s BMI (${mark.bmi.toFixed(1)})`
+//   );
+// }
+
+// ===============================
+// Coding Challenge #4 - For and While loops - Fundamentals part 2
+
+// const tips = [];
+// const totals = [];
+// // Or I can do it like this
+// // const totals = BILLS.map((bill, index) => {
+// //   return bill + tips[index];
+// // });
+
+// for (let i = 0; i < BILLS.length; i++) {
+//   tips.push(calculateTip(BILLS[i]));
+// }
+// for (let j = 0; j < BILLS.length; j++) {
+//   totals.push(BILLS[j] + tips[j]);
+// }
+
+// console.log("Bills", BILLS);
+// console.log("Tips", tips);
+// console.log("Totals", totals);
+
+// function calcAvarage(arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i];
+//   }
+//   const result = sum / arr.length;
+//   return result;
+// }
+// const result = calcAvarage(totals);
+// console.log("Avrege bill + tip", result);

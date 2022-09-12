@@ -102,7 +102,6 @@ import { worldPopulation } from "./constants.js";
 // Introduction to Arrays;
 // const population = [20, 60, 300, 70];
 // const verifyArrLeng = population.length >= 4;
-// console.log(verifyArrLeng);
 
 // function percentageOfWorld1(population) {
 //   return (population / worldPopulation) * 100;
@@ -138,7 +137,7 @@ import { worldPopulation } from "./constants.js";
 //   capital: "Bucarest",
 //   language: "romanian",
 //   population: 20,
-//   neighbours: ["Ukrain", "Hungary", "Moldova", "Bulgaria"],
+//   neighbours: ["Ukrain", "Hungary", "Moldova", "Bulgaria, "Serbia"],
 // };
 // myCountry.continent = "Europe";
 // myCountry["my-state"] = "Cluj";
@@ -155,3 +154,64 @@ import { worldPopulation } from "./constants.js";
 
 // myCountry["population"] -= 2;
 // console.log(myCountry["population"]);
+
+// ===============================
+// Introduction to for loops
+// for (let voter = 1; voter <= 50; voter++) {
+//   console.log(`Voter number ${voter} is currently voting!`);
+// }
+
+// ===============================
+// Looping Arr
+// const population2 = [20, 60, 300, 70];
+
+// let percentages2 = [];
+// for (let i = 0; i < population2.length; i++) {
+//   percentages2.push(percentageOfWorld1(population[i]));
+
+//   if (percentages[i] === percentages2[i]) {
+//     // here the result is true because they are pass by value
+//     // console.log("they are the same");
+//   }
+// }
+// console.log(percentages2);
+// const aretheyequal = percentages === percentages2;
+// here the result is false because they are pass by reference
+// console.log(aretheyequal);
+
+// ===============================
+// Looping Backwards and Loops in Loops
+// const listOfNeighbours = [
+//   ["Canada", "Mexico"],
+//   ["Spain"],
+//   ["Norway", "Sweeden"],
+//   ["Russia"],
+// ];
+
+// for (let i = 0; i < listOfNeighbours.length; i++) {
+//   for (let j = 0; j < listOfNeighbours[i].length; j++) {
+//     console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
+//   }
+// }
+
+// ===============================
+// The while Loop
+// function percentageOfWorld1(population) {
+//   return (population / worldPopulation) * 100;
+// }
+// const population3 = [20, 60, 300, 70];
+// let percentages3 = [];
+
+// let i = 0;
+// while (i < population3.length) {
+//   const perc = percentageOfWorld1(population3[i]);
+//   percentages3.push(perc);
+
+// if (percentages[i] === percentages3[i]) {
+//   // here the result is true because they are pass by value
+//   console.log("they are the same");
+// }
+//   i++;
+// }
+
+// console.log(percentages3);

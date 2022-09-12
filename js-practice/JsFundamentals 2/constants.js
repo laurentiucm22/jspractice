@@ -14,3 +14,6 @@ export const worldPopulation = 7900;
 
 // Coding challenge 2 - Arrays - Js Fundamentals part 2
 export const bills = [125, 555, 44];
+
+// Coding challenge 4 - For and While loops = Js Fundamentals part 2
+export const BILLS = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
