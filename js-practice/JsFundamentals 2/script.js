@@ -173,11 +173,10 @@ import { bills, BILLS } from "./constants.js";
 //   height: 1.69,
 //   calcBMI: function () {
 //     this.bmi = this.mass / this.height ** 2;
+//     console.log(this.bmi);
 //     return this.bmi;
 //   }
 // }
-
-// // console.log(marksBMI);
 
 // const john = {
 //   firstName: "John",
@@ -186,12 +185,13 @@ import { bills, BILLS } from "./constants.js";
 //   height: 1.95,
 //   calcBMI: function () {
 //     this.bmi = this.mass / this.height ** 2;
+//     console.log(this.bmi);
 //     return this.bmi;
 //   },
 // };
+
 // mark.calcBMI();
 // john.calcBMI();
-// // console.log(jhonsBMI);
 
 // if (mark.bmi > john.bmi) {
 //   // prettier-ignore
@@ -217,10 +217,9 @@ import { bills, BILLS } from "./constants.js";
 // // });
 
 // for (let i = 0; i < BILLS.length; i++) {
-//   tips.push(calculateTip(BILLS[i]));
-// }
-// for (let j = 0; j < BILLS.length; j++) {
-//   totals.push(BILLS[j] + tips[j]);
+//   const tip = calculateTip(BILLS[i]);
+//   tips.push(tip);
+//   totals.push(tip + BILLS[i]);
 // }
 
 // console.log("Bills", BILLS);

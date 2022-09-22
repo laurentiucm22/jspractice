@@ -176,7 +176,7 @@ import { worldPopulation } from "./constants.js";
 // }
 // console.log(percentages2);
 // const aretheyequal = percentages === percentages2;
-// here the result is false because they are pass by reference
+// // here the result is false because they are pass by reference
 // console.log(aretheyequal);
 
 // ===============================
