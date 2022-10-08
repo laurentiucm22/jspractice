@@ -91,7 +91,7 @@ btns.forEach((btn) => {
       // prettier-ignore
       document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
 
-      if (scores[activePlayer] >= 20) {
+      if (scores[activePlayer] >= 100) {
         playing = false;
         // prettier-ignore
         document.querySelector(`.player--${activePlayer}`).classList.add("player--winner");
