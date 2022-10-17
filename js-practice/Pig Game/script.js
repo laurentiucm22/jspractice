@@ -20,8 +20,8 @@ const player1Class = document.querySelector(".player--0");
 const player2Class = document.querySelector(".player--1");
 
 // Modal and overlay logic
-overlay.classList.add("hidden");
-modal.classList.add("hidden");
+overlay.classList.remove("hidden");
+modal.classList.remove("hidden");
 
 player1Input.addEventListener("change", () => {
   const player1EnteredName = player1Input.value;
