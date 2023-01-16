@@ -471,8 +471,8 @@
 // planesInLine(5);
 // planesInLine(7);
 // planesInLine(1);
-document.body.append(document.createElement("textarea"));
-document.body.append(document.createElement("button"));
+// document.body.append(document.createElement("textarea"));
+// document.body.append(document.createElement("button"));
 
 // My take
 
@@ -504,18 +504,18 @@ document.body.append(document.createElement("button"));
 //   }
 // });
 // My take 2
-// const convertButton = document.querySelector("button");
-// convertButton.addEventListener("click", function () {
-//   const text = document.querySelector("textarea").value;
-//   const names = text.split("\n");
+// const convertButton = document.querySelector('button');
+// convertButton.addEventListener('click', function () {
+//   const text = document.querySelector('textarea').value;
+//   const names = text.split('\n');
 
 //   for (const [i, name] of names.entries()) {
-//     const [firstName, secondName] = name.toLowerCase().trim().split("_");
+//     const [firstName, secondName] = name.toLowerCase().trim().split('_');
 //     const output = `${firstName}${secondName.replace(
 //       secondName[0],
 //       secondName[0].toUpperCase()
 //     )} `;
-//     console.log(`${output.padEnd(20)} ${"✅".repeat(i + 1)}`);
+//     console.log(`${output.padEnd(20)} ${'✅'.repeat(i + 1)}`);
 //   }
 // });
 
@@ -551,3 +551,23 @@ const flights =
 // ................Arrival from BRU to FAO (11h45)
 // ...🔴.Delayed Departure from HEL to FAO (12h05)
 // ...............Departure from FAO to LIS (12h30)
+
+const getLetters = (str) => str.slice(0, 3).toUpperCase();
+
+const splitFlightsOne = flights.split("+");
+
+const result = splitFlightsOne.forEach((str) => {
+  const [type, fromAir, to, time] = str.split(";");
+
+  const output = `${type.startsWith("_Delayed") ? "🔴" : ""}${type.replaceAll(
+    "_",
+    " "
+  )} from ${getLetters(fromAir)} to ${getLetters(to)} (${time.replace(
+    ":",
+    "h"
+  )})`
+    .trimStart()
+    .padStart(47, ".");
+
+  return console.log(output);
+});
