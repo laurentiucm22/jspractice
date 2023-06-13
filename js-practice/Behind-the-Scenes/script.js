@@ -171,41 +171,103 @@
 // addArrow(2, 5);
 
 // Primitive types
-let lastName = "Williams";
-let oldLastName = lastName;
+// let lastName = "Williams";
+// let oldLastName = lastName;
 
-lastName = "Davis";
-// console.log(lastName);
-// console.log(oldLastName);
+// lastName = "Davis";
+// // console.log(lastName);
+// // console.log(oldLastName);
 
-// Reference types
-const jessica = {
-  firstName: "Jessica",
-  lastName: "Williams",
-  age: 27,
-};
+// // Reference types
+// const jessica = {
+//   firstName: "Jessica",
+//   lastName: "Williams",
+//   age: 27,
+// };
 
-const marriedJessica = jessica;
-marriedJessica.lastName = "Davis";
-// console.log(jessica);
-// console.log(marriedJessica);
+// const marriedJessica = jessica;
+// marriedJessica.lastName = "Davis";
+// // console.log(jessica);
+// // console.log(marriedJessica);
 
-// Copying objects
-const jessica2 = {
-  firstName: "Jessica",
-  lastName: "Williams",
-  age: 27,
-  family: ["Bob", "Dilan"],
-};
+// // Copying objects
+// const jessica2 = {
+//   firstName: "Jessica",
+//   lastName: "Williams",
+//   age: 27,
+//   family: ["Bob", "Dilan"],
+// };
 
-// Object.assign({}, jessica2); - this creates a shalow copy not a deep copy, the deep copy is what we actually want;
-const jessicaCopy = { ...jessica2 };
-// or like this we can create a new object
-// Object.assign() & the spread operator have both done a copy the parent object, the array being a deep object this methods are not applied to it.
-// We can use and external library for deep copying
-jessicaCopy.lastName = "Davis";
-jessicaCopy.family.push("George");
-jessicaCopy.family.push("Michaelson");
+// // Object.assign({}, jessica2); - this creates a shalow copy not a deep copy, the deep copy is what we actually want;
+// const jessicaCopy = { ...jessica2 };
+// // or like this we can create a new object
+// // Object.assign() & the spread operator have both done a copy the parent object, the array being a deep object this methods are not applied to it.
+// // We can use and external library for deep copying
+// jessicaCopy.lastName = "Davis";
+// jessicaCopy.family.push("George");
+// jessicaCopy.family.push("Michaelson");
 
-console.log(jessica2);
-console.log(jessicaCopy);
+// console.log(jessica2);
+// console.log(jessicaCopy);
+// let testArr = ["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"];
+// let testArrSec = ["1, 3, 9, 10, 17, 18", "1, 4, 9, 10"];
+// let testArrFalse = ["1, 2, 3, 4", "5, 6, 7, 8"];
+
+// let testArrfour = ["1, 5, 6, 7, 10, 11, 12", "5, 6, 8, 11, 17"];
+
+// function checkIntersect(strArr) {
+//   const arrFirstElement = strArr[0].split(",");
+
+//   const arrSecondElement = strArr[1].split(",");
+
+//   let resultArr = [];
+//   let finalStr;
+
+//   for (let i = 0; i < arrFirstElement.length; i++) {
+//     for (let j = 0; j < arrSecondElement.length; j++) {
+//       if (+arrFirstElement[i] === +arrSecondElement[j]) {
+//         resultArr.push(arrFirstElement[i]);
+//       }
+//     }
+//   }
+
+//   if (resultArr.length > 0) {
+//     finalStr = resultArr.join(",");
+//   } else {
+//     finalStr = "false";
+//   }
+
+//   return finalStr;
+// }
+
+// console.log(checkIntersect(testArr));
+
+// let strInput = "acc?7??sss?3rr3???7acc";
+// let strInput2 = "acc??";
+
+// function questionMarks(str) {
+//   let lastNum = null;
+//   let count = 0;
+//   let num;
+
+//   for (let i = 0; i < str.length; i++) {
+//     const chart = str[i];
+
+//     if (/\d/.test(chart)) {
+//       num = +chart;
+//       lastNum = num;
+
+//       if (lastNum !== null && num + lastNum === 10) {
+//         if (count !== 3) {
+//           return false;
+//         }
+//         count = 0;
+//       }
+//       lastNum = num;
+//     } else if (chart === "?") {
+//       count++;
+//     }
+//   }
+//   return true;
+// }
+// console.log(questionMarks(strInput));
